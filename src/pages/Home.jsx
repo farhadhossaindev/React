@@ -1,10 +1,16 @@
-import React from 'react'
+import Layout from "../components/Layout"
+import { useAuth } from "../context/auth"
 
 function Home() {
+
+  const [auth, setAuth] = useAuth()
+
+
   return (
-    <div>
-        <h1 className='text-center text-5xl font-bold'>Here instrall react router dom, daisyUI, TailwindCss</h1>
-    </div>
+    <Layout title={'AaMeRaa Best Offer'}>
+      <h1>Home</h1>
+      <pre>{JSON.stringify(auth, null, 4)}</pre>
+    </Layout>
   )
 }
 
